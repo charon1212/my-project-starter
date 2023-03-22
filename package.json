@@ -1,0 +1,27 @@
+{
+  "name": "my-project-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "charon1212-starter": "build/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charon1212/my-project-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charon1212/my-project-starter/issues"
+  },
+  "homepage": "https://github.com/charon1212/my-project-starter#readme",
+  "dependencies": {
+    "util-charon1212": "^1.19.4"
+  }
+}
