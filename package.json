@@ -7,8 +7,8 @@
     "charon1212-starter": "build/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "tsc && cd commandtest && charon1212-starter"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/charon1212/my-project-starter#readme",
   "dependencies": {
+    "@charon1212/result": "^1.1.0",
+    "edit-package-json": "^0.8.10",
     "util-charon1212": "^1.19.4"
   },
   "devDependencies": {
