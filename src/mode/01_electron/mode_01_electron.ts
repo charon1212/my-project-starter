@@ -60,6 +60,7 @@ export const mode_01_electron = async () => {
   logger.mark2('package.jsonの修正');
   packageJson('package.json', (before) => {
     before['main'] = 'build/electron/electron.js';
+    before['homepage'] = './';
     if (!before['scripts']) before['scripts'] = {};
     before['scripts']['electron:dev'] = 'tsc -p electron && electron .';
     before['scripts']['electron:prod'] = 'npm run build && tsc -p electron && electron-builder --win --x64 --dir';
