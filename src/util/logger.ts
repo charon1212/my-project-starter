@@ -1,6 +1,10 @@
 import * as fs from 'fs';
 
-const logFilePath = 'C:/charon1212-starter.log';
+const replaceUserprofileEnv = (str: string): string => {
+  return str.replace(/%USERPROFILE%/g, process.env['USERPROFILE'] || '');
+};
+const logDirPath = replaceUserprofileEnv('%USERPROFILE%/.charon1212/my-project-starter');
+const logFilePath = `${logDirPath}/my-project-starter.log`;
 
 export const logger = {
   mark1: (content: string) => log(`■ ■ ■ ${content}`),
@@ -11,5 +15,6 @@ export const logger = {
 
 const log = (content: string) => {
   console.log(content);
-  if (logFilePath) fs.writeFileSync(logFilePath, `${content}\r\n`, { flag: 'a' });
+  if (!fs.existsSync(logDirPath)) fs.mkdirSync(logDirPath, { recursive: true });
+  fs.writeFileSync(logFilePath, `${content}\r\n`, { flag: 'a' });
 };

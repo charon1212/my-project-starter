@@ -7,5 +7,6 @@
 `npm link`コマンドで、CLIコマンド`charon1212-starter`を登録。（package.jsonの`bin`プロパティから設定している。）
 
 ```
+> npm link
 > charon1212-starter
 ```
