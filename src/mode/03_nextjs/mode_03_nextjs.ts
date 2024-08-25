@@ -10,7 +10,7 @@ export const mode_03_nextjs = async () => {
     + " --no-tailwind"          // Tailwind CSSを利用しない
     + " --src-dir"              // 「src/」ディレクトリを利用する
     + " --app"                  // App Routerを利用する
-    + " --import-alias '@/*'";  // Import Aliasの設定（デフォルト設定）
+    + " --import-alias @/*";  // Import Aliasの設定（デフォルト設定）
   logger.mark2(`[${commandCreateNextApp}] nextjsのテンプレートをインストール`);
   const result1 = await command.exec(commandCreateNextApp);
   if (result1.isEr) return;

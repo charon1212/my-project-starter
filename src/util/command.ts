@@ -6,7 +6,8 @@ export type MyCommandException = { error: { errorObject: ExecException, stderr: 
 export const command = {
   exec: (command: string) => {
     return new Promise<Result<string, MyCommandException>>((resolve, reject) => {
-      exec(command, (error, stdout, stderr) => {
+      exec(command, { timeout: 60000,  }, (error, stdout, stderr) => {
+        logger.debug(JSON.stringify({ error, stdout, stderr }));
         if (error) {
           logger.mark1('★ERROR:');
           logger.log(JSON.stringify({ error: { errorObject: error, stderr } }));
