@@ -24,7 +24,8 @@
   "dependencies": {
     "@charon1212/result": "^1.1.0",
     "edit-package-json": "^0.8.10",
-    "util-charon1212": "^1.19.4"
+    "util-charon1212": "^1.19.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^18.15.5"
